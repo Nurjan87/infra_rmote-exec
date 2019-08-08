@@ -10,7 +10,7 @@ resource "aws_instance" "jenkins"{
             host = "${self.public_ip}"
             type = "ssh"
             user = "${var.user}"
-            privat_key = "${file("~/.ssh/id_rsa")}"
+            private_key = "${file("~/.ssh/id_rsa")}"
         }
          inline = [
       "sudo yum update -y",
