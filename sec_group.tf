@@ -1,7 +1,7 @@
 resource "aws_security_group" "jenkins" {
   name        = "jenkins"
   description = "Allow inbound traffic"
-  vpc_id      = "${var.vpc_id}"
+  vpc_id      = "${var.vpc}"
 
   ingress {
     # TLS (change to whatever ports you need)

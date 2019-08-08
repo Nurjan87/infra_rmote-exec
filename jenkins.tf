@@ -3,7 +3,7 @@ resource "aws_instance" "jenkins"{
     instance_type = "${var.instance_type}"
     key_name = "${aws_key_pair.developer.id}"
     associate_public_ip_address = true
-    security_groups = ["${aws_security+group.jenkins.id}"]
+    security_groups = ["${aws_security+group.jenkins.name}"]
 
     provisioner "remote-exec" {
         connection {

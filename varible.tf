@@ -2,7 +2,7 @@ variable "Name" {}
 variable "Created_by" {}
 variable "Dept" {}
 variable "Env" {}
-variable "vpc_id" {}
+variable "vpc" {}
 variable "instance_type" {}
 variable "user" {}
 variable "zone_id" {}
