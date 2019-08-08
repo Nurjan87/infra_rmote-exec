@@ -28,9 +28,9 @@ resource "aws_security_group" "r1soft" {
       cidr_blocks = ["0.0.0.0/0"]
   }
    tags = {
-        Name = ""
-        Dept = ""
-        Group = ""
-        Created_by = ""
+        Name =  "${var.Name}.public"
+        Dept = "${var.Env}"
+        Group = "${var.Created_by}"
+        Created_by = "${var.Dept}"
     }
 }

@@ -1,9 +1,9 @@
 resource "aws_instance" "r1soft"{
     ami = "${var.ami}"
     instance_type = "${var.instance_type}"
-    key_name = "${aws_key_pair.developer_key.id}"
+    key_name = "${var.key_name}"
     associate_public_ip_address = true
-    security_groups = ["${aws_security_group.jenkins.name}"]
+    security_groups = ["${aws_security_group.r1soft.name}"]
 
     provisioner "remote-exec" {
         connection {
@@ -13,7 +13,7 @@ resource "aws_instance" "r1soft"{
             private_key = "${file("~/.ssh/id_rsa")}"
         }
          inline = [
-      "sudo yum update -y",
+      ""sudo yum install telnet -y"",
       
     ]
 
