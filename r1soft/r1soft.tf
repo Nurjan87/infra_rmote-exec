@@ -1,4 +1,4 @@
-resource "aws_instance" "r1soft"{
+resource "aws_instance" "r1soft1"{
     ami = "${var.ami}"
     instance_type = "${var.instance_type}"
     key_name = "${var.key_name}"
