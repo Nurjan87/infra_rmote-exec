@@ -1,3 +1,3 @@
 output "link" {
-    value =  "${aws_route53_record.jenkins2}:8080
+    value =  "${aws_route53_record.jenkins2.name}:8080"
 }
